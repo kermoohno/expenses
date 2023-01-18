@@ -1,10 +1,16 @@
+import React, { useState } from 'react';
+
+
 import './ExpenseItem.css'
 import ExpenseDate from "./ExpenseDate";
 
 const ExpenseItem = (props) =>{
-    const day = props.expenseData.date.toLocaleString('en-US', {day:'2-digit'})
-    const month = props.expenseData.date.toLocaleString('en-US', {month:'long'})
-    const year = props.expenseData.date.getFullYear()
+    const [title, setTitle] = useState(props.expenseData.title)
+
+    const clickHandler = () => {
+        setTitle('Updated!')
+        console.log(title)
+    }
 
     return (
         <div className="expense-item">
@@ -13,6 +19,7 @@ const ExpenseItem = (props) =>{
                 <h2>{props.expenseData.title}</h2>
                 <div className="expense-item__price">{props.expenseData.price}€</div>
             </div>
+            <button onClick={clickHandler}>Change Title</button>
         </div>
     )
 }
