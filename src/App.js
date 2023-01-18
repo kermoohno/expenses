@@ -4,7 +4,7 @@ import Expenses from './components/Expenses/Expenses'
 
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 
-function App() {
+const App = () => {
     const expenses = [
         {
             date: new Date(2023, 0, 10),
