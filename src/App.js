@@ -6,19 +6,22 @@ import NewExpense from "./components/NewExpense/NewExpense"
 
 const DUMMY_EXPENSES = [
     {
+        id: 'e1',
         date: new Date(2023, 0, 10),
         title:'New book',
-        price: 30.99
+        amount: 30.99
     },
     {
+        id: 'e2',
         date: new Date(2023, 0, 5),
         title:'Icecream',
-        price: 3.99
+        amount: 3.99
     },
     {
+        id: 'e3',
         date: new Date(2023, 0, 5),
         title:'New Jeans',
-        price: 30.99
+        amount: 30.99
     }
 ]
 
