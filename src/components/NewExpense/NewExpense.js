@@ -16,12 +16,17 @@ const NewExpense = (props) => {
             id: Math.random().toString()
         }
         props.onAddExpense(expenseData)
+        formEditHandler()
+    }
+
+    const cancelHandler = () => {
+        formEditHandler()
     }
 
     if (formEdit) {
         return(
             <div className='new-expense'>
-                <ExpenseForm onSaveExpenseData={saveExpenseDatahandler} onSubmission={formEditHandler}></ExpenseForm>
+                <ExpenseForm onSaveExpenseData={saveExpenseDatahandler} onCancel={cancelHandler} />
             </div>
         )
     } else {
